@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 
 st.title("Obesity Classification")
@@ -12,8 +12,7 @@ with col1:
     Weight=st.text_input("Enter your weight:")
     BMI=st.text_input("Enter your BMI:")
 
-    with open("obesity_7.pkl","rb") as file:
-        model=pickle.load(file)
+    model=joblib.load("obes_99.pkl")
 
     if st.button("prediction"):
         data=[[Age,Gender,Height,Weight,BMI]]
