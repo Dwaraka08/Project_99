@@ -1,5 +1,6 @@
+scikit-learn==1.0.2  # Example, adjust based on your model
+joblib
 streamlit
 pandas
 numpy
-requests
-joblib
+
